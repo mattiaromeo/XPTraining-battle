@@ -2,6 +2,7 @@ package be.cegeka.battle;
 
 import org.apache.commons.lang3.Validate;
 
+import static be.cegeka.battle.Weapon.*;
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 public class Soldier {
@@ -13,7 +14,7 @@ public class Soldier {
         Validate.isTrue(isNotBlank(name));
 
         this.name = name;
-        this.weapon=new Weapon("BareFist");
+        this.weapon = BAREFIST;
     }
 
     String getName() {

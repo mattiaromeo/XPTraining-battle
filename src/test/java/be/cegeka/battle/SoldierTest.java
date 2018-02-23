@@ -3,6 +3,7 @@ package be.cegeka.battle;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.junit.Test;
 
+import static be.cegeka.battle.Weapon.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SoldierTest {
@@ -32,8 +33,7 @@ public class SoldierTest {
 
     @Test
     public void Soldier_OnCreation_HasBareFistAsDefaultWeapon() {
-        Soldier soldier = new Soldier("jeroen");
-        Weapon bareFist = new Weapon("BareFist");
-        assertThat(soldier.getWeapon()).isEqualTo(bareFist);
+        Soldier soldier = new Soldier("Kiki");
+        assertThat(soldier.getWeapon()).isEqualTo(BAREFIST);
     }
 }
