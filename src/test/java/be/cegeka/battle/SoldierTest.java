@@ -1,10 +1,12 @@
 package be.cegeka.battle;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.assertj.core.api.ThrowableAssert;
 import org.junit.Test;
 
 import static be.cegeka.battle.Weapon.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class SoldierTest {
 
@@ -47,5 +49,11 @@ public class SoldierTest {
         assertThat(winner).isEqualTo(soldier1);
     }
 
-
+    @Test
+    public void attack_givenSameSoldier_shouldThrowIllegalArgumentException() {
+        Soldier soldier = new Soldier("name");
+        assertThatThrownBy(() -> soldier.attack(soldier))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Can't fight yourself");
+    }
 }

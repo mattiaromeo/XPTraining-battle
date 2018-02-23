@@ -26,6 +26,7 @@ public class Soldier {
     }
 
     public Soldier attack(Soldier otherSoldier) {
+        if(otherSoldier == this) throw new IllegalArgumentException("Can't fight yourself");
         return this.weapon.winsAgainst(otherSoldier.getWeapon()) ? this : otherSoldier;
     }
 
