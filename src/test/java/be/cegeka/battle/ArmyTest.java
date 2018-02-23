@@ -41,5 +41,15 @@ public class ArmyTest {
 
         Army army = new Army();
         army.addSoldier(soldier);
+
+        assertThat(army.getFrontMan()).isEqualTo(soldier);
+    }
+
+    @Test
+    public void getFrontMan_givenEmptyArmy_shouldThrowIllegalStateException() {
+        Army army = new Army();
+        assertThatThrownBy(() -> army.getFrontMan())
+                .isInstanceOf(IllegalStateException.class)
+                .hasMessage("Army is Empty");
     }
 }
