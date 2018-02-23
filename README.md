@@ -9,7 +9,7 @@
 * Go to https://travis-ci.org/profile/your_account
 * Click ```Sync account```
 * Flip the switch for ```XPTraining-battle```
-* Push a change to the forked repository
+* Push a change to the forked repository - first change
 * Go to https://travis-ci.org/your_account/XPTraining-battle
 * Enjoy your first build for XPTraining-battle! (it can take a few minutes before the build will start)
 
