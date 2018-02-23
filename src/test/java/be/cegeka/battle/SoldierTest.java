@@ -8,6 +8,7 @@ public class SoldierTest {
 
     @Test
     public void construction_ASoldierMustHaveAName() {
+
         Soldier soldier = new Soldier("name");
 
         assertThat(soldier.getName()).isEqualTo("name");
