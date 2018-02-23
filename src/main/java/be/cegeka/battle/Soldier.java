@@ -24,4 +24,12 @@ public class Soldier {
     public Weapon getWeapon() {
         return weapon;
     }
+
+    public Soldier attack(Soldier otherSoldier) {
+        return this.weapon.winsAgainst(otherSoldier.getWeapon()) ? this : otherSoldier;
+    }
+
+    public String toString() {
+        return name + " with " + weapon;
+    }
 }

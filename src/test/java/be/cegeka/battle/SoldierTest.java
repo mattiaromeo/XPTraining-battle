@@ -36,4 +36,16 @@ public class SoldierTest {
         Soldier soldier = new Soldier("Kiki");
         assertThat(soldier.getWeapon()).isEqualTo(BAREFIST);
     }
+
+    @Test
+    public void whenFightingASoldier_WeaponDamageShouldBeCompared() {
+        Soldier soldier1 = new Soldier("Kiki");
+        Soldier soldier2 = new Soldier("Nicky");
+
+        Soldier winner = soldier1.attack(soldier2);
+
+        assertThat(winner).isEqualTo(soldier1);
+    }
+
+
 }
